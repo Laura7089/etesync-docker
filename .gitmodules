@@ -1,0 +1,3 @@
+[submodule "etesync-server"]
+	path = etesync-server
+	url = gh://etesync/server
