@@ -21,5 +21,3 @@ The "easy" configuration file from upstream is modified here and mounted at `/et
 - Static files are created at start in the volume at `/srv/etebase-server`
 - Data files are stored in the volume at `/var/etebase-server`
 - The image will serve at `8000` on TCP
-
-The image requires [Docker BuildKit](https://docs.docker.com/go/buildkit/) to build.

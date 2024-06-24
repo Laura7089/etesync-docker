@@ -2,7 +2,8 @@ FROM python:3.8
 
 # copy in and install the app
 COPY etesync-server /app
-COPY --chmod=755 run.sh /run.sh
+COPY run.sh /run.sh
+RUN chmod 0755 /run.sh
 WORKDIR /app
 RUN pip install -r requirements.txt
 
