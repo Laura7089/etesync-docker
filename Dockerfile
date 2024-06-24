@@ -1,10 +1,16 @@
 FROM python:3.8
 
+ARG ETESYNC_VERSION="v0.14.2"
+
 # copy in and install the app
-COPY etesync-server /app
+RUN mkdir -p /app
+WORKDIR /app
+RUN \
+    curl --fail --location \
+        "https://github.com/etesync/server/archive/refs/tags/$ETESYNC_VERSION.tar.gz" \
+    | tar xzv --directory=/app --strip-components=1
 COPY run.sh /run.sh
 RUN chmod 0755 /run.sh
-WORKDIR /app
 RUN pip install -r requirements.txt
 
 # setup basic configuration and directories
