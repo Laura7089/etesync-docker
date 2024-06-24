@@ -1,0 +1,18 @@
+services:
+  etebase:
+    build: .
+    volumes:
+      - "etebase-static:/srv/etebase-server"
+      - "etebase-data:/var/etebase-server"
+
+  proxy:
+    image: nginx
+    ports:
+      - "8000:8000"
+    volumes:
+      - "etebase-static:/srv/etebase-server"
+      - "./etebase_nginx.conf:/etc/nginx/sites-enabled/etebase_nginx.conf"
+
+volumes:
+  etebase-static:
+  etebase-data:
