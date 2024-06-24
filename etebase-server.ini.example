@@ -1,9 +1,9 @@
 [global]
-secret_file = secret.txt
+secret_file = /var/etebase-server/secret.txt
 debug = false
 ;Set the paths where data will be stored at
 static_root = /srv/etebase-server
-media_root = /var/etebase-server
+media_root = /var/etebase-server/media
 
 ;Advanced options, only uncomment if you know what you're doing:
 ;static_url = /static/
@@ -17,7 +17,7 @@ allowed_host1 = *
 
 [database]
 engine = django.db.backends.sqlite3
-name = db.sqlite3
+name = /var/etebase-server/db.sqlite3
 
 [database-options]
 ; Add engine-specific options here, such as postgresql parameter key words
