@@ -12,7 +12,7 @@ docker run -p 8000:8000
 
 You should refer to the [upstream production setup guide](https://github.com/etesync/server/wiki/Production-setup-using-Nginx) once you have confirmed the image works.
 
-An example `docker-compose.yml` file (with accompanying nginx config) is included with this repo, but should not be considered production-ready.
+An example setup is included with this repo in `deploy/`, but should not be considered production-ready.
 
 ### Configuration
 

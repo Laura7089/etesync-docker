@@ -1,6 +1,6 @@
 services:
   etebase:
-    build: .
+    image: laura7089/etesync
     volumes:
       - "etebase-static:/srv/etebase-server"
       - "etebase-data:/var/etebase-server"
