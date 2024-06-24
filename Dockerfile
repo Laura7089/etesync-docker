@@ -11,7 +11,9 @@ RUN \
     | tar xzv --directory=/app --strip-components=1
 COPY run.sh /run.sh
 RUN chmod 0755 /run.sh
-RUN pip install -r requirements.txt
+RUN pip \
+    --no-python-version-warning --disable-pip-version-check --no-cache \
+    install -r requirements.txt
 
 # setup basic configuration and directories
 RUN mkdir -p /etc/etebase-server /srv/etebase-server /var/etebase-server
