@@ -10,8 +10,8 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - "etebase-static:/srv/etebase-server"
-      - "./etebase_nginx.conf:/etc/nginx/sites-enabled/etebase_nginx.conf"
+      - "etebase-static:/srv/etebase-server:ro"
+      - "./etebase_nginx.conf:/etc/nginx/sites-available/etebase_nginx.conf:ro"
 
 volumes:
   etebase-static:
